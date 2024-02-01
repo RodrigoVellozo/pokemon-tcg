@@ -1,1 +1,8 @@
+
+<ul>
+  @for (poke of pokemons$|async; track $index) {
+    <li>{{poke.name}} - {{poke.supertype}}</li>
+  }
+</ul>
+
 <router-outlet></router-outlet>
