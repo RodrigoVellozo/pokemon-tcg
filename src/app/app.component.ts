@@ -1,21 +1,19 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PokemonService } from './services/pokemon.service';
-import { tap } from 'rxjs';
+import { NavbarComponent } from './shared/ui/navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [
+    CommonModule,
+    RouterOutlet,
+    NavbarComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'pokemon-tcg';
-
-
-  pokemons$ = this._pokemonService.getPokemons().pipe(tap(x=>console.log(x)));
-
-  constructor(private _pokemonService: PokemonService){}
 }
