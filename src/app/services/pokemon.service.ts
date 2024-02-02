@@ -10,7 +10,8 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemons(){
+  getPokemons(query: any){
+    console.log('>>>',query)
     return this.http.get<any>(environment.baseApiV2).pipe(map(res=>res.data));
   }
 }

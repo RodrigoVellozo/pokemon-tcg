@@ -7,6 +7,10 @@ export const routes: Routes = [
     },
     {
         path:'decks',
-        loadComponent:()=> import('./components/decks-list/decks-list.component').then(m=>m.DecksListComponent)
+        loadComponent:()=> import('./components/decks/decks-list/decks-list.component').then(m=>m.DecksListComponent)
+    },
+    {
+        path:'createDeck',
+        loadComponent:()=> import('./components/decks/create-deck/create-deck.component').then(m=>m.CreateDeckComponent),
     }
 ];
