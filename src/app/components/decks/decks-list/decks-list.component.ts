@@ -3,6 +3,7 @@ import { SearchComponent } from '../../../shared/ui/search/search.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, RouterOutlet } from '@angular/router';
+import { CardComponent } from '../../../shared/ui/card/card.component';
 
 @Component({
   selector: 'app-decks-list',
@@ -10,6 +11,7 @@ import { RouterModule, RouterOutlet } from '@angular/router';
   imports: [
     RouterModule,
     SearchComponent,
+    CardComponent
   ],
   templateUrl: './decks-list.component.html',
   styleUrl: './decks-list.component.scss'

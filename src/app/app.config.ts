@@ -7,14 +7,16 @@ import { routes } from './app.routes';
 
 import { provideEffects } from '@ngrx/effects';
 import { provideStore } from '@ngrx/store';
+import { DeckEffects } from './components/decks/state/deck.effects';
+import { deckReducer } from './components/decks/state/deck.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideHttpClient(),
 
-    provideStore({}),
-    provideEffects([]),
+    provideStore({'decks': deckReducer}),
+    provideEffects([DeckEffects]),
     provideStoreDevtools({ maxAge: 25, logOnly: false}),
   ]
 };

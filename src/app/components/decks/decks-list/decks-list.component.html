@@ -1,12 +1,14 @@
-<div style="border: 1px solid red; background-color: bisque">
-  <app-search></app-search>
+<app-search ></app-search>
+
+<div class="mt-20 grid grid-cols-3 gap-4 h-px-60">
+
+  <section class="bg-blue-500 col-span-2">
+    <button [routerLink]="['/createDeck']">Create a deck</button>
+
+    <app-card></app-card>
+  
+  </section>
+
+  <aside class="bg-yellow-400">aside</aside>
+
 </div>
-
-<button
-  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-  [routerLink]="['/createDeck']"
->
-  Create a deck
-</button>
-
-<p>decks-list works!</p>
